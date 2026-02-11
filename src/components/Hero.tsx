@@ -20,7 +20,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-full bg-primary/5 border border-primary/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-primary uppercase mb-8"
           >
             <Cpu size={14} />
-            AI MARKETING INFRASTRUCTURE FOR <span className="font-bold">REPS</span> & <span className="font-bold">MANUFACTURERS</span>
+            <span>AI MARKETING INFRASTRUCTURE FOR <span className="font-bold">REPS</span> &nbsp;<span className="font-bold">MANUFACTURERS</span></span>
           </motion.div>
 
           {/* Headline */}

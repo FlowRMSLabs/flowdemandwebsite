@@ -96,15 +96,17 @@ export default function CampaignWizard() {
 
   const handleSubmit = async () => {
     try {
-      await fetch("/api/campaign", {
+      const res = await fetch("/api/campaign", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      if (!res.ok) throw new Error("Failed to submit");
+      setSubmitted(true);
     } catch (err) {
       console.error("Submission error:", err);
+      alert("Something went wrong. Please try again.");
     }
-    setSubmitted(true);
   };
 
   const advance = () => {
